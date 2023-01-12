@@ -18,8 +18,7 @@ export const Profile = styled.div`
   gap: 0.5rem;
 
   padding: 2rem;
-  margin-top: 3.5rem;
-  margin: auto;
+  margin-top: 3rem;
 
   img {
     margin: auto;
@@ -48,8 +47,8 @@ export const LinkList = styled.ul`
     justify-content: center;
     height: 3.25rem;
 
-    background: var(--surface-color);
-    border: 1px solid var(--stroke-color);
+    background: ${(props) => props.theme.surfaceColor};
+    border: 1px solid ${(props) => props.theme.strokeColor};
     border-radius: 5px;
 
     backdrop-filter: blur(4px);
@@ -62,8 +61,8 @@ export const LinkList = styled.ul`
     transition: background 0.2s;
 
     :hover {
-      background: var(--surface-color-hover);
-      border: 1.5px solid var(--text-color);
+      background: ${(props) => props.theme.surfaceColorHover};
+      border: 1.5px solid ${(props) => props.theme.textColor};
     }
   }
 `
@@ -83,7 +82,7 @@ export const SocialLinks = styled.div`
   }
 
   a:hover {
-    background: var(--highlight-color);
+    background: ${(props) => props.theme.highlightColor};
     padding: 16px;
   }
 `

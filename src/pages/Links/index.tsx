@@ -5,14 +5,25 @@ import {
   LinkedinLogo,
   TwitterLogo,
 } from 'phosphor-react'
+import { ThemeSwitcher } from '../../components/ThemeSwitcher'
+import { DefaultTheme } from 'styled-components'
 
-export function Links() {
+interface LinksProps {
+  toggleTheme(): void
+  theme: DefaultTheme
+}
+
+export function Links({ theme, toggleTheme }: LinksProps) {
   return (
     <LinksContent>
       <Profile>
         <img src="../../../src/assets/avatar.png" alt="" />
         <p>@vinicsperes</p>
       </Profile>
+
+      <div>
+        <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
+      </div>
 
       <LinkList>
         <li>
